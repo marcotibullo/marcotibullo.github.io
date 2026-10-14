@@ -34,6 +34,7 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+main a { font-weight: 500; }
 strong, b { font-weight: 500; }
 
 /* ---------- Navbar ---------- */
