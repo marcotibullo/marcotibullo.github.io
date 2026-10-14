@@ -3,8 +3,8 @@
   --bg: #ffffff;
   --text: #212529;
   --muted: #6c757d;
-  --accent: #0b6e4f;          /* change this one value to recolour the site */
-  --accent-soft: rgba(11, 110, 79, 0.08);
+  --accent: #1a3a6b;          /* change this one value to recolour the site */
+  --accent-soft: rgba(26, 58, 107, 0.07);
   --border: #e5e7eb;
   --nav-bg: rgba(255, 255, 255, 0.96);
   --shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
@@ -13,8 +13,8 @@
   --bg: #1c1c1d;
   --text: #e8e8e8;
   --muted: #a0a0a0;
-  --accent: #4cc39a;
-  --accent-soft: rgba(76, 195, 154, 0.12);
+  --accent: #8ab4f0;
+  --accent-soft: rgba(138, 180, 240, 0.12);
   --border: #333;
   --nav-bg: rgba(28, 28, 29, 0.96);
   --shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
@@ -45,7 +45,7 @@ strong, b { font-weight: 500; }
 }
 .navbar .inner {
   max-width: 960px; margin: 0 auto; padding: 0 16px;
-  height: 58px; display: flex; align-items: center; justify-content: space-between;
+  height: 58px; display: flex; align-items: center; justify-content: flex-end;
 }
 .brand { color: var(--text); font-size: 1.15rem; }
 .brand b { font-weight: 500; }
@@ -76,9 +76,8 @@ strong, b { font-weight: 500; }
 /* ---------- Page ---------- */
 main { max-width: 960px; margin: 0 auto; padding: 40px 16px 24px; }
 .post-header h1 {
-  font-size: 2.6rem; font-weight: 300; margin: 0 0 4px; letter-spacing: -0.5px;
+  font-size: 2.6rem; font-weight: 500; margin: 0 0 28px; letter-spacing: -0.5px;
 }
-.post-header h1 b { font-weight: 500; }
 .post-header .desc { color: var(--muted); margin: 0 0 28px; }
 h2 {
   font-size: 1.45rem; font-weight: 400; color: var(--accent);
@@ -88,15 +87,15 @@ h3 { font-size: 1.1rem; font-weight: 500; margin: 1.4rem 0 .4rem; }
 
 /* ---------- Profile (home) ---------- */
 .profile {
-  float: right; width: 32%; max-width: 270px;
+  float: right; width: 38%; max-width: 340px;
   margin: 0 0 20px 32px; text-align: center;
 }
 .profile img {
-  width: 100%; border-radius: 6px; box-shadow: var(--shadow); display: block;
+  width: 100%; height: auto; border-radius: 6px; box-shadow: var(--shadow); display: block;
 }
 .profile .address { font-size: .88rem; color: var(--muted); margin-top: 10px; line-height: 1.45; }
 @media (max-width: 640px) {
-  .profile { float: none; width: 60%; margin: 0 auto 24px; }
+  .profile { float: none; width: 75%; margin: 0 auto 24px; }
 }
 .clearfix::after { content: ""; display: table; clear: both; }
 
@@ -109,6 +108,10 @@ h3 { font-size: 1.1rem; font-weight: 500; margin: 1.4rem 0 .4rem; }
   transition: color .15s, transform .15s;
 }
 .social a:hover { color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+
+.interests { list-style: none; counter-reset: item; padding-left: 1.2em; margin: -0.4em 0 1em; }
+.interests li { counter-increment: item; margin: 2px 0; }
+.interests li::before { content: "(" counter(item, lower-roman) ") "; color: var(--muted); }
 
 /* ---------- Research list ---------- */
 .paper { padding: 14px 0 16px; border-bottom: 1px solid var(--border); }
